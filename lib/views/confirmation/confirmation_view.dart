@@ -29,7 +29,11 @@ class _ConfirmationViewState extends State<ConfirmationView> {
           ),
           ButtonComponent(
             title: "Sign In",
-            onTap: () {},
+            onTap: () => Navigator.pushNamedAndRemoveUntil(
+              context,
+              '/signup',
+              (route) => false,
+            ),
           )
         ],
       ),
