@@ -1,11 +1,20 @@
+import 'package:flipgrid_mobile/core/providers/user_signup_provider.dart';
 import 'package:flipgrid_mobile/core/settings/app_settings.dart';
 import 'package:flipgrid_mobile/core/theme/theme.dart';
 import 'package:flipgrid_mobile/views/confirmation/confirmation_view.dart';
 import 'package:flipgrid_mobile/views/signup/signup_view.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UserSignupProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
