@@ -11,7 +11,7 @@ class UserSignupProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  void resetUser(UserSignUpEntity user) {
+  void resetUser() {
     _user = null;
     notifyListeners();
   }
