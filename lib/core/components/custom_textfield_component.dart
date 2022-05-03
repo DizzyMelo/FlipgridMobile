@@ -1,17 +1,29 @@
 import 'package:flipgrid_mobile/core/theme/custom_text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 
+// ignore: must_be_immutable
 class CustomTextfieldComponent extends StatelessWidget {
   final String label;
   final TextEditingController controller;
   final TextInputType inputType;
   final TextCapitalization capitalization;
+  final TextInputAction inputAction;
+  final String? Function(String?)? validator;
+  final bool isSecuredField, isObscure;
+  final Function()? toggleSecuredFied;
+
   CustomTextfieldComponent({
     Key? key,
     required this.label,
     required this.controller,
     this.inputType = TextInputType.text,
     this.capitalization = TextCapitalization.none,
+    this.validator,
+    this.inputAction = TextInputAction.next,
+    this.isSecuredField = false,
+    this.toggleSecuredFied,
+    this.isObscure = false,
   }) : super(key: key);
 
   InputBorder border = OutlineInputBorder(
@@ -23,15 +35,26 @@ class CustomTextfieldComponent extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
       child: TextFormField(
+        obscureText: isObscure,
+        textInputAction: inputAction,
+        validator: validator,
         style: CustomTextStyle.textfield,
         controller: controller,
         keyboardType: inputType,
         textCapitalization: capitalization,
         decoration: InputDecoration(
-            labelText: label,
-            border: border,
-            disabledBorder: border,
-            enabledBorder: border),
+          labelText: label,
+          border: border,
+          disabledBorder: border,
+          enabledBorder: border,
+          suffixIcon: isSecuredField
+              ? IconButton(
+                  onPressed: toggleSecuredFied,
+                  icon: Icon(isObscure ? LineIcons.eye : LineIcons.eyeSlash),
+                  color: Theme.of(context).primaryColor,
+                )
+              : null,
+        ),
       ),
     );
   }
