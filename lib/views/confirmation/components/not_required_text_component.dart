@@ -1,4 +1,5 @@
 import 'package:flipgrid_mobile/core/theme/custom_text_style.dart';
+import 'package:flipgrid_mobile/core/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -19,7 +20,7 @@ class NotRequiredTextComponent extends StatelessWidget {
     if (isLink) {
       return InkWell(
         onTap: () async {
-          if (!await launchUrl(Uri.parse("https://www.google.com/"))) {
+          if (!await launchUrl(Utils.validateUrl(text!))) {
             throw 'Could not launch $text';
           }
         },
