@@ -17,11 +17,6 @@ abstract class AuthControllerBase with Store {
   @observable
   bool isPasswordObscure = true;
 
-  @observable
-  late UserSignUpEntity user;
-
-  String confirmationGreeting = "Hello!";
-
   signup(BuildContext context, UserSignUpEntity signUpEntity) async {
     isLoading = true;
     await Future.delayed(const Duration(seconds: 1));
