@@ -1,10 +1,9 @@
-# flipgrid_mobile
+# Flip Grid Mobile
 
-A new Flutter project.
-
+This project uses the Flutter framework.
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a Flutter application. It contains two screens: Sign Up and Confirmation
 
 A few resources to get you started if this is your first Flutter project:
 
