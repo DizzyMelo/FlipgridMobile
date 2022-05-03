@@ -32,6 +32,7 @@ class _ConfirmationViewState extends State<ConfirmationView> {
                 title: confirmationGreeting,
                 subtitle:
                     "Your super-awesome portfolio has been successfully submitted! The details below will be public within your community!",
+                margin: const EdgeInsets.only(top: 30, bottom: 10),
               ),
               NotRequiredTextComponent(
                 text: user.website,

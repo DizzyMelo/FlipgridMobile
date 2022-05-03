@@ -4,14 +4,19 @@ import 'package:flutter/material.dart';
 class HeaderComponent extends StatelessWidget {
   final String title;
   final String subtitle;
+  final EdgeInsetsGeometry margin;
 
-  const HeaderComponent({Key? key, required this.title, required this.subtitle})
-      : super(key: key);
+  const HeaderComponent({
+    Key? key,
+    required this.title,
+    required this.subtitle,
+    this.margin = const EdgeInsets.symmetric(vertical: 30),
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 30),
+      margin: margin,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

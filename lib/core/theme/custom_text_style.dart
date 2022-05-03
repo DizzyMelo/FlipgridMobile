@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextStyle {
@@ -8,10 +7,10 @@ class CustomTextStyle {
     color: Colors.grey[800],
   );
   static TextStyle subtitle = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w600,
-    color: Colors.grey[700],
-  );
+      fontSize: 14,
+      fontWeight: FontWeight.w600,
+      color: Colors.grey[700],
+      height: 1.1);
 
   static TextStyle textfield = TextStyle(
     fontSize: 14,

@@ -25,7 +25,7 @@ class NotRequiredTextComponent extends StatelessWidget {
           }
         },
         child: Container(
-          margin: const EdgeInsets.symmetric(vertical: 10),
+          margin: const EdgeInsets.only(bottom: 10),
           child: Text(
             text!,
             style: CustomTextStyle.link,
@@ -34,7 +34,7 @@ class NotRequiredTextComponent extends StatelessWidget {
       );
     }
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.only(bottom: 10),
       child: Text(
         text!,
         style: CustomTextStyle.paragraph,
