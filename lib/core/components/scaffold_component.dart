@@ -8,6 +8,7 @@ class ScaffoldComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: child,
