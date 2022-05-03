@@ -1,3 +1,4 @@
+import 'package:flipgrid_mobile/core/components/loading_component.dart';
 import 'package:flutter/material.dart';
 
 class ButtonComponent extends StatelessWidget {
@@ -15,6 +16,18 @@ class ButtonComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (isLoading) {
+      return Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: Colors.grey[400],
+        ),
+        height: height,
+        width: double.infinity,
+        alignment: Alignment.center,
+        child: const LoadingComponent(),
+      );
+    }
     return InkWell(
       onTap: onTap,
       child: Material(
