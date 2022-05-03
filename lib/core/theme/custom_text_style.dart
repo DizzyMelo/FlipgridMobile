@@ -18,4 +18,16 @@ class CustomTextStyle {
     fontWeight: FontWeight.w600,
     color: Colors.grey[700],
   );
+
+  static TextStyle paragraph = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Colors.grey[800],
+  );
+
+  static const TextStyle link = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: Colors.blue,
+      decoration: TextDecoration.underline);
 }
