@@ -5,6 +5,10 @@ This project uses the Flutter framework.
 
 This project is a starting point for a Flutter application. It contains two screens: Sign Up and Confirmation
 
+![Signup View](./assets/img/signup.jpg)
+![Confirmation View](./assets/img/confirmation.jpg)
+
+
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
