@@ -1,6 +1,6 @@
 import 'package:flipgrid_mobile/core/domain/validators/validator.dart';
 
-class PasswordValidator implements Validator {
+class PasswordValidator implements IValidator {
   @override
   String? valite(String? value) {
     if (value == null || value.isEmpty) {

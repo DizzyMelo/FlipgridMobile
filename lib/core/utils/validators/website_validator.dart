@@ -1,7 +1,7 @@
 import 'package:flipgrid_mobile/core/domain/validators/validator.dart';
 import 'package:validators/validators.dart';
 
-class WebsiteValidator implements Validator {
+class WebsiteValidator implements IValidator {
   @override
   String? valite(String? value) {
     if (value == null || value.isEmpty) {
