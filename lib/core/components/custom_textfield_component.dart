@@ -45,6 +45,7 @@ class CustomTextfieldComponent extends StatelessWidget {
         textCapitalization: capitalization,
         decoration: InputDecoration(
           labelText: label,
+          errorMaxLines: 7,
           border: border,
           disabledBorder: border,
           enabledBorder: border,
