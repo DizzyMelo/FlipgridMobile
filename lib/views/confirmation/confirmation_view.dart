@@ -74,7 +74,7 @@ class _ConfirmationViewState extends State<ConfirmationView> {
     String greeting = "";
 
     if (tempUser.firstName == null || tempUser.firstName!.isEmpty) {
-      greeting = "Hello";
+      greeting = "Hello!";
     } else {
       greeting = "Hello, ${tempUser.firstName}!";
     }
