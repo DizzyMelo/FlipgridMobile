@@ -1,7 +1,7 @@
 import 'package:flipgrid_mobile/core/utils/validators/website_validator.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-void main(List<String> args) {
+void main() {
   late WebsiteValidator websiteValidator;
 
   setUp(() {
