@@ -1,5 +1,8 @@
 import 'package:flipgrid_mobile/controllers/auth_controller.dart';
-import 'package:flipgrid_mobile/core/utils/form_validator.dart';
+import 'package:flipgrid_mobile/core/utils/validators/email_validator.dart';
+import 'package:flipgrid_mobile/core/utils/validators/firstname_validator.dart';
+import 'package:flipgrid_mobile/core/utils/validators/password_validator.dart';
+import 'package:flipgrid_mobile/core/utils/validators/website_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
@@ -12,8 +15,13 @@ class SignupFormComponent extends StatelessWidget {
   final TextEditingController websiteController;
   final AuthController controller;
 
+  final firstNameValidator = FirstNameValidator();
+  final emailValidator = EmailValidator();
+  final passwordValidator = PasswordValidator();
+  final websiteValidator = WebsiteValidator();
+
   final GlobalKey formKey;
-  const SignupFormComponent(
+  SignupFormComponent(
       {Key? key,
       required this.formKey,
       required this.firstNameController,
@@ -35,20 +43,19 @@ class SignupFormComponent extends StatelessWidget {
               label: "First Name",
               controller: firstNameController,
               capitalization: TextCapitalization.words,
+              validator: firstNameValidator,
             ),
             CustomTextfieldComponent(
               label: "Email Address",
               controller: emailController,
               inputType: TextInputType.emailAddress,
-              validator: (String? value) =>
-                  FormValidator.validateEmailAddress(value),
+              validator: emailValidator,
             ),
             Observer(
               builder: (_) => CustomTextfieldComponent(
                 label: "Password",
                 controller: passwordController,
-                validator: (String? value) =>
-                    FormValidator.validatePassword(value),
+                validator: passwordValidator,
                 isSecuredField: true,
                 isObscure: controller.isPasswordObscure,
                 toggleSecuredFied: controller.togglePasswordObscure,
@@ -59,8 +66,7 @@ class SignupFormComponent extends StatelessWidget {
               controller: websiteController,
               inputType: TextInputType.url,
               inputAction: TextInputAction.done,
-              validator: (String? value) =>
-                  FormValidator.validateWebsite(value),
+              validator: websiteValidator,
             ),
           ],
         ),

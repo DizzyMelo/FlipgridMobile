@@ -1,3 +1,4 @@
+import 'package:flipgrid_mobile/core/domain/validators/validator.dart';
 import 'package:flipgrid_mobile/core/theme/custom_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
@@ -9,7 +10,7 @@ class CustomTextfieldComponent extends StatelessWidget {
   final TextInputType inputType;
   final TextCapitalization capitalization;
   final TextInputAction inputAction;
-  final String? Function(String?)? validator;
+  final Validator validator;
   final bool isSecuredField, isObscure;
   final Function()? toggleSecuredFied;
 
@@ -19,7 +20,7 @@ class CustomTextfieldComponent extends StatelessWidget {
     required this.controller,
     this.inputType = TextInputType.text,
     this.capitalization = TextCapitalization.none,
-    this.validator,
+    required this.validator,
     this.inputAction = TextInputAction.next,
     this.isSecuredField = false,
     this.toggleSecuredFied,
@@ -37,7 +38,7 @@ class CustomTextfieldComponent extends StatelessWidget {
       child: TextFormField(
         obscureText: isObscure,
         textInputAction: inputAction,
-        validator: validator,
+        validator: validator.valite,
         style: CustomTextStyle.textfield,
         controller: controller,
         keyboardType: inputType,
