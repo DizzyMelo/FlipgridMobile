@@ -10,7 +10,7 @@ class CustomTextfieldComponent extends StatelessWidget {
   final TextInputType inputType;
   final TextCapitalization capitalization;
   final TextInputAction inputAction;
-  final Validator validator;
+  final IValidator validator;
   final bool isSecuredField, isObscure;
   final Function()? toggleSecuredFied;
 
