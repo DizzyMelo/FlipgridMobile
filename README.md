@@ -8,6 +8,8 @@ This project is a starting point for a Flutter application. It contains two scre
 ![Signup View](./assets/img/signup.jpg)
 ![Confirmation View](./assets/img/confirmation.jpg)
 
+The app is capable of detecting the display mode and adapt to the user settings, chaging the theme to dark or light accordingly.
+
 ![Signup View Dark](./assets/img/signup_dark.jpg)
 ![Confirmation View Dark](./assets/img/confirmation_dark.jpg)
 
