@@ -39,7 +39,7 @@ class CustomTextfieldComponent extends StatelessWidget {
         obscureText: isObscure,
         textInputAction: inputAction,
         validator: validator.valite,
-        style: CustomTextStyle.textfield,
+        style: Theme.of(context).textTheme.caption,
         controller: controller,
         keyboardType: inputType,
         textCapitalization: capitalization,

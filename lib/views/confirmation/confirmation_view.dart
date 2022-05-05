@@ -43,7 +43,7 @@ class _ConfirmationViewState extends State<ConfirmationView> {
               ),
               Text(
                 user.email,
-                style: CustomTextStyle.paragraph,
+                style: Theme.of(context).textTheme.bodyText1,
               )
             ],
           ),

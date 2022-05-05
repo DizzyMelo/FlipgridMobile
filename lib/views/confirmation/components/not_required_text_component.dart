@@ -1,4 +1,3 @@
-import 'package:flipgrid_mobile/core/theme/custom_text_style.dart';
 import 'package:flipgrid_mobile/core/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -28,7 +27,7 @@ class NotRequiredTextComponent extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 10),
           child: Text(
             text!,
-            style: CustomTextStyle.link,
+            style: Theme.of(context).textTheme.overline,
           ),
         ),
       );
@@ -37,7 +36,7 @@ class NotRequiredTextComponent extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 10),
       child: Text(
         text!,
-        style: CustomTextStyle.paragraph,
+        style: Theme.of(context).textTheme.bodyText1,
       ),
     );
   }

@@ -22,14 +22,14 @@ class HeaderComponent extends StatelessWidget {
         children: [
           Text(
             title,
-            style: CustomTextStyle.title,
+            style: Theme.of(context).textTheme.headline1,
           ),
           const SizedBox(
             height: 10,
           ),
           Text(
             subtitle,
-            style: CustomTextStyle.subtitle,
+            style: Theme.of(context).textTheme.subtitle1,
           ),
         ],
       ),

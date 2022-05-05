@@ -31,7 +31,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppSettings.appName,
+      themeMode: ThemeMode.system,
       theme: FlipgridTheme.light,
+      darkTheme: FlipgridTheme.dark,
       home: const SignupView(),
       initialRoute: '/signup',
       routes: {

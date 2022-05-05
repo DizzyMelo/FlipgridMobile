@@ -48,8 +48,7 @@ class ButtonComponent extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             title,
-            style: const TextStyle(
-                color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
+            style: Theme.of(context).textTheme.button,
           ),
         ),
       ),
