@@ -1,5 +1,4 @@
 import 'package:flipgrid_mobile/core/domain/validators/validator.dart';
-import 'package:flipgrid_mobile/core/theme/custom_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 

@@ -1,4 +1,3 @@
-import 'package:flipgrid_mobile/core/theme/custom_text_style.dart';
 import 'package:flutter/material.dart';
 
 class HeaderComponent extends StatelessWidget {

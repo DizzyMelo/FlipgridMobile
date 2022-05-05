@@ -2,7 +2,6 @@ import 'package:flipgrid_mobile/core/components/button_component.dart';
 import 'package:flipgrid_mobile/core/components/header_component.dart';
 import 'package:flipgrid_mobile/core/components/scaffold_component.dart';
 import 'package:flipgrid_mobile/core/domain/entities/user_signup_entity.dart';
-import 'package:flipgrid_mobile/core/theme/custom_text_style.dart';
 import 'package:flipgrid_mobile/views/confirmation/components/not_required_text_component.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
