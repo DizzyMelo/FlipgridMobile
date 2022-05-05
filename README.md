@@ -8,6 +8,9 @@ This project is a starting point for a Flutter application. It contains two scre
 ![Signup View](./assets/img/signup.jpg)
 ![Confirmation View](./assets/img/confirmation.jpg)
 
+![Signup View Dark](./assets/img/signup_dark.jpg)
+![Confirmation View Dark](./assets/img/confirmation_dark.jpg)
+
 
 A few resources to get you started if this is your first Flutter project:
 
