@@ -83,23 +83,23 @@ class FlipgridTheme {
       headline1: TextStyle(
         fontSize: 30,
         fontWeight: FontWeight.w900,
-        color: Colors.grey[400],
+        color: Colors.grey[300],
       ),
       subtitle1: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w600,
-        color: Colors.grey[500],
+        color: Colors.grey[400],
         height: 1.1,
       ),
       bodyText1: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w600,
-        color: Colors.grey[400],
+        color: Colors.grey[300],
       ),
       caption: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w600,
-        color: Colors.grey[500],
+        color: Colors.grey[400],
       ),
       overline: const TextStyle(
         fontSize: 16,
