@@ -14,7 +14,7 @@ class SignupRoute implements Routable {
 
 class ConfirmationRoute implements Routable {
   @override
-  final String _routeName = '/signup';
+  final String _routeName = '/confirmation';
 
   @override
   String get route => _routeName;
