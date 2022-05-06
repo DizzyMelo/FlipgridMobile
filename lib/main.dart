@@ -1,3 +1,5 @@
+import 'package:flipgrid_mobile/controllers/confirmation_controller.dart';
+import 'package:flipgrid_mobile/core/navigation/routes.dart';
 import 'package:flipgrid_mobile/core/providers/user_signup_provider.dart';
 import 'package:flipgrid_mobile/core/settings/app_settings.dart';
 import 'package:flipgrid_mobile/core/theme/theme.dart';
@@ -34,12 +36,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: FlipgridTheme.light,
       darkTheme: FlipgridTheme.dark,
-      home: const SignupView(),
       initialRoute: '/signup',
-      routes: {
-        '/signup': (_) => const SignupView(),
-        '/confirmation': (_) => const ConfirmationView(),
-      },
+      onGenerateRoute: (settings) => Routes.generateRoutes(settings),
     );
   }
 }

@@ -13,7 +13,7 @@ class SignupFormComponent extends StatelessWidget {
   final TextEditingController emailController;
   final TextEditingController passwordController;
   final TextEditingController websiteController;
-  final AuthController controller;
+  final AuthControllerBase controller;
 
   final firstNameValidator = FirstNameValidator();
   final emailValidator = EmailValidator();

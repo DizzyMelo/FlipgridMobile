@@ -9,7 +9,8 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'components/signup_form_component.dart';
 
 class SignupView extends StatefulWidget {
-  const SignupView({Key? key}) : super(key: key);
+  final AuthControllerBase controller;
+  const SignupView({Key? key, required this.controller}) : super(key: key);
 
   @override
   State<SignupView> createState() => _SignupViewState();
@@ -21,8 +22,6 @@ class _SignupViewState extends State<SignupView> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final websiteController = TextEditingController();
-
-  final controller = AuthController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +38,7 @@ class _SignupViewState extends State<SignupView> {
               ),
               SignupFormComponent(
                 formKey: _formKey,
-                controller: controller,
+                controller: widget.controller,
                 firstNameController: firstNameController,
                 emailController: emailController,
                 passwordController: passwordController,
@@ -49,7 +48,7 @@ class _SignupViewState extends State<SignupView> {
           ),
           Observer(
             builder: (_) => ButtonComponent(
-              isLoading: controller.isLoading,
+              isLoading: widget.controller.isLoading,
               title: "Submit",
               onTap: () {
                 if (_formKey.currentState!.validate()) {
@@ -58,7 +57,7 @@ class _SignupViewState extends State<SignupView> {
                   signUpEntity.setEmail = emailController.text;
                   signUpEntity.setPassword = passwordController.text;
                   signUpEntity.setWebsite = websiteController.text;
-                  controller.signup(context, signUpEntity);
+                  widget.controller.signup(context, signUpEntity);
                 }
               },
             ),

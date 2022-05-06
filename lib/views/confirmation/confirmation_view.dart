@@ -10,14 +10,16 @@ import 'package:provider/provider.dart';
 import '../../core/providers/user_signup_provider.dart';
 
 class ConfirmationView extends StatefulWidget {
-  const ConfirmationView({Key? key}) : super(key: key);
+  final ConfirmationControllerBase controller;
+
+  const ConfirmationView({Key? key, required this.controller})
+      : super(key: key);
 
   @override
   State<ConfirmationView> createState() => _ConfirmationViewState();
 }
 
 class _ConfirmationViewState extends State<ConfirmationView> {
-  final controller = ConfirmationController();
   @override
   Widget build(BuildContext context) {
     return ScaffoldComponent(
@@ -28,20 +30,20 @@ class _ConfirmationViewState extends State<ConfirmationView> {
             builder: (_) => Column(
               children: [
                 HeaderComponent(
-                  title: controller.confirmationGreeting,
+                  title: widget.controller.confirmationGreeting,
                   subtitle:
                       "Your super-awesome portfolio has been successfully submitted! The details below will be public within your community!",
                   margin: const EdgeInsets.only(top: 30, bottom: 10),
                 ),
                 NotRequiredTextComponent(
-                  text: controller.user.website,
+                  text: widget.controller.user.website,
                   isLink: true,
                 ),
                 NotRequiredTextComponent(
-                  text: controller.user.firstName,
+                  text: widget.controller.user.firstName,
                 ),
                 Text(
-                  controller.user.email,
+                  widget.controller.user.email,
                   style: Theme.of(context).textTheme.bodyText1,
                 )
               ],
@@ -65,7 +67,7 @@ class _ConfirmationViewState extends State<ConfirmationView> {
 
   @override
   void initState() {
-    controller.setUserConfirmation(context);
+    widget.controller.setUserConfirmation(context);
     super.initState();
   }
 }
