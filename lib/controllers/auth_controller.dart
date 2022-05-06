@@ -1,4 +1,5 @@
 import 'package:flipgrid_mobile/core/domain/entities/user_signup_entity.dart';
+import 'package:flipgrid_mobile/core/navigation/routes.dart';
 import 'package:flipgrid_mobile/core/providers/user_signup_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
@@ -19,7 +20,7 @@ abstract class AuthControllerBase with Store {
     isLoading = true;
     await Future.delayed(const Duration(seconds: 1));
     context.read<UserSignupProvider>().setUser(signUpEntity);
-    Navigator.pushNamed(context, '/confirmation');
+    Navigator.pushNamed(context, Routes.confirmationRoute.route);
     isLoading = false;
   }
 

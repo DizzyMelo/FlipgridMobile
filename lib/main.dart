@@ -1,3 +1,4 @@
+import 'package:flipgrid_mobile/core/navigation/route_generator.dart';
 import 'package:flipgrid_mobile/core/navigation/routes.dart';
 import 'package:flipgrid_mobile/core/providers/user_signup_provider.dart';
 import 'package:flipgrid_mobile/core/settings/app_settings.dart';
@@ -33,8 +34,8 @@ class FlipGridApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: FlipgridTheme.light,
       darkTheme: FlipgridTheme.dark,
-      initialRoute: '/signup',
-      onGenerateRoute: (settings) => Routes.generateRoutes(settings),
+      initialRoute: Routes.signupRoute.route,
+      onGenerateRoute: (settings) => RouteGenerator.generateRoutes(settings),
     );
   }
 }

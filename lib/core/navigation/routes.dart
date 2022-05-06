@@ -1,33 +1,26 @@
-import 'package:flipgrid_mobile/views/confirmation/confirmation_view.dart';
-import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
+abstract class Routable {
+  final String _routeName = "/";
 
-import '../../controllers/auth_controller.dart';
-import '../../controllers/confirmation_controller.dart';
-import '../../views/signup/signup_view.dart';
+  String get route => _routeName;
+}
+
+class SignupRoute implements Routable {
+  @override
+  final String _routeName = '/signup';
+
+  @override
+  String get route => _routeName;
+}
+
+class ConfirmationRoute implements Routable {
+  @override
+  final String _routeName = '/signup';
+
+  @override
+  String get route => _routeName;
+}
 
 class Routes {
-  static Route<dynamic> generateRoutes(RouteSettings settings) {
-    ConfirmationController _confirmationController = ConfirmationController();
-    AuthController _authController = AuthController();
-    switch (settings.name) {
-      case '/signup':
-        return MaterialPageRoute(
-            builder: (context) => SignupView(
-                  controller: _authController,
-                ));
-      case '/confirmation':
-        return PageTransition(
-            child: ConfirmationView(
-              controller: _confirmationController,
-            ),
-            type: PageTransitionType.bottomToTop);
-
-      default:
-        return MaterialPageRoute(
-            builder: (context) => SignupView(
-                  controller: _authController,
-                ));
-    }
-  }
+  static final Routable signupRoute = SignupRoute();
+  static final Routable confirmationRoute = ConfirmationRoute();
 }
