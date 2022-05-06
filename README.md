@@ -33,6 +33,8 @@ samples, guidance on mobile development, and a full API reference.
 
 Plugins can be found [here](https://pub.dev/)
 
+### Plugins Used
+
 To run this application, head to [Flutter Get Started](https://docs.flutter.dev/get-started/install) to install the Flutter SDK. Once the SDK is installed and the environment is properly set, run the application using the following command in the project root:
 
     flutter run
