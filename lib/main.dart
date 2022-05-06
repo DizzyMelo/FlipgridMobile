@@ -1,10 +1,7 @@
-import 'package:flipgrid_mobile/controllers/confirmation_controller.dart';
 import 'package:flipgrid_mobile/core/navigation/routes.dart';
 import 'package:flipgrid_mobile/core/providers/user_signup_provider.dart';
 import 'package:flipgrid_mobile/core/settings/app_settings.dart';
 import 'package:flipgrid_mobile/core/theme/theme.dart';
-import 'package:flipgrid_mobile/views/confirmation/confirmation_view.dart';
-import 'package:flipgrid_mobile/views/signup/signup_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
