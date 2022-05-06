@@ -15,14 +15,14 @@ void main() {
         providers: [
           ChangeNotifierProvider(create: (_) => UserSignupProvider()),
         ],
-        child: const MyApp(),
+        child: const FlipGridApp(),
       ),
     );
   });
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class FlipGridApp extends StatelessWidget {
+  const FlipGridApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
