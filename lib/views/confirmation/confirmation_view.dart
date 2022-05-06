@@ -2,6 +2,7 @@ import 'package:flipgrid_mobile/controllers/confirmation_controller.dart';
 import 'package:flipgrid_mobile/core/components/button_component.dart';
 import 'package:flipgrid_mobile/core/components/header_component.dart';
 import 'package:flipgrid_mobile/core/components/scaffold_component.dart';
+import 'package:flipgrid_mobile/core/navigation/routes.dart';
 import 'package:flipgrid_mobile/views/confirmation/components/not_required_text_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -55,7 +56,7 @@ class _ConfirmationViewState extends State<ConfirmationView> {
               context.read<UserSignupProvider>().resetUser();
               Navigator.pushNamedAndRemoveUntil(
                 context,
-                '/signup',
+                Routes.signupRoute.route,
                 (route) => false,
               );
             },
