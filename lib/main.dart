@@ -35,7 +35,7 @@ class FlipGridApp extends StatelessWidget {
       theme: FlipgridTheme.light,
       darkTheme: FlipgridTheme.dark,
       initialRoute: Routes.signupRoute.route,
-      onGenerateRoute: (settings) => RouteGenerator.generateRoutes(settings),
+      onGenerateRoute: RouteGenerator.generateRoutes,
     );
   }
 }
