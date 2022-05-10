@@ -1,4 +1,4 @@
-import 'package:flipgrid_mobile/core/domain/validators/validator.dart';
+import '../../../domain/validators/validator.dart';
 
 class PasswordValidator implements IValidator {
   @override

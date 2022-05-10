@@ -1,5 +1,5 @@
-import 'package:flipgrid_mobile/core/domain/exception/custom_exception.dart';
 import 'package:flipgrid_mobile/core/utils/utils.dart';
+import 'package:flipgrid_mobile/domain/exception/custom_exception.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

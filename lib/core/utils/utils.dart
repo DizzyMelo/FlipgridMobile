@@ -1,5 +1,6 @@
-import 'package:flipgrid_mobile/core/domain/exception/custom_exception.dart';
 import 'package:validators/validators.dart';
+
+import '../../domain/exception/custom_exception.dart';
 
 class Utils {
   static Uri validateUrl(String url) {

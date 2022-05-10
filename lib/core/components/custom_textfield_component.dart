@@ -1,6 +1,7 @@
-import 'package:flipgrid_mobile/core/domain/validators/validator.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+
+import '../../domain/validators/validator.dart';
 
 // ignore: must_be_immutable
 class CustomTextfieldComponent extends StatelessWidget {

@@ -2,10 +2,10 @@ import 'package:flipgrid_mobile/controllers/auth_controller.dart';
 import 'package:flipgrid_mobile/core/components/button_component.dart';
 import 'package:flipgrid_mobile/core/components/header_component.dart';
 import 'package:flipgrid_mobile/core/components/scaffold_component.dart';
-import 'package:flipgrid_mobile/core/domain/entities/user_signup_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
+import '../../domain/entities/user_signup_entity.dart';
 import 'components/signup_form_component.dart';
 
 class SignupView extends StatefulWidget {

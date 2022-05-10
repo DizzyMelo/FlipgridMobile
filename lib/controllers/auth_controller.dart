@@ -1,9 +1,10 @@
-import 'package:flipgrid_mobile/core/domain/entities/user_signup_entity.dart';
 import 'package:flipgrid_mobile/core/navigation/routes.dart';
 import 'package:flipgrid_mobile/core/providers/user_signup_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
+
+import '../domain/entities/user_signup_entity.dart';
 
 part 'auth_controller.g.dart';
 

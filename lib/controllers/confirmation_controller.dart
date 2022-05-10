@@ -1,9 +1,9 @@
-import 'package:flipgrid_mobile/core/domain/entities/user_signup_entity.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 
 import '../core/providers/user_signup_provider.dart';
+import '../domain/entities/user_signup_entity.dart';
 
 part 'confirmation_controller.g.dart';
 

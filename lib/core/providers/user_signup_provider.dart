@@ -1,5 +1,6 @@
-import 'package:flipgrid_mobile/core/domain/entities/user_signup_entity.dart';
 import 'package:flutter/material.dart';
+
+import '../../domain/entities/user_signup_entity.dart';
 
 class UserSignupProvider with ChangeNotifier {
   UserSignUpEntity? _user;

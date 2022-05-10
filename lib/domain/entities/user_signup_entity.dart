@@ -1,4 +1,4 @@
-import 'package:flipgrid_mobile/core/domain/entities/user_entity.dart';
+import 'user_entity.dart';
 
 class UserSignUpEntity extends UserEntity {
   late String _password;
