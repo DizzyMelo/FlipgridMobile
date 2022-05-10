@@ -1,10 +1,10 @@
-import 'package:flipgrid_mobile/views/confirmation/confirmation_view.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../../controllers/auth_controller.dart';
-import '../../controllers/confirmation_controller.dart';
-import '../../views/signup/signup_view.dart';
+import '../../presenter/controllers/auth_controller.dart';
+import '../../presenter/controllers/confirmation_controller.dart';
+import '../../presenter/views/confirmation/confirmation_view.dart';
+import '../../presenter/views/signup/signup_view.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoutes(RouteSettings settings) {

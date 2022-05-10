@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
 import 'package:provider/provider.dart';
 
-import '../domain/entities/user_signup_entity.dart';
+import '../../domain/entities/user_signup_entity.dart';
 
 part 'auth_controller.g.dart';
 

@@ -1,4 +1,3 @@
-import 'package:flipgrid_mobile/controllers/auth_controller.dart';
 import 'package:flipgrid_mobile/core/utils/validators/email_validator.dart';
 import 'package:flipgrid_mobile/core/utils/validators/firstname_validator.dart';
 import 'package:flipgrid_mobile/core/utils/validators/password_validator.dart';
@@ -6,7 +5,8 @@ import 'package:flipgrid_mobile/core/utils/validators/website_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
-import '../../../core/components/custom_textfield_component.dart';
+import '../../../../core/components/custom_textfield_component.dart';
+import '../../../controllers/auth_controller.dart';
 
 class SignupFormComponent extends StatelessWidget {
   final TextEditingController firstNameController;

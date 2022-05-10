@@ -1,14 +1,14 @@
-import 'package:flipgrid_mobile/controllers/confirmation_controller.dart';
 import 'package:flipgrid_mobile/core/components/button_component.dart';
 import 'package:flipgrid_mobile/core/components/header_component.dart';
 import 'package:flipgrid_mobile/core/components/scaffold_component.dart';
 import 'package:flipgrid_mobile/core/navigation/routes.dart';
-import 'package:flipgrid_mobile/views/confirmation/components/not_required_text_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 
-import '../../core/providers/user_signup_provider.dart';
+import '../../../core/providers/user_signup_provider.dart';
+import '../../controllers/confirmation_controller.dart';
+import 'components/not_required_text_component.dart';
 
 class ConfirmationView extends StatefulWidget {
   final ConfirmationControllerBase controller;
